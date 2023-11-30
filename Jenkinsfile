@@ -1,6 +1,6 @@
+@Library("jenkins-library") _
 pipeline {
     agent any
-
     stages {
         stage("Git Checkout") {
             steps {
@@ -16,7 +16,8 @@ pipeline {
             steps {
                 // Your build steps go here
                 sh "ls -lart ./*"
-                sh "echo ZALUPENNN"
+                sh "cat /etc/*release"
+                helloWorldExternal(name:"Volodymyr", surname:"Volodymyrovych")
             }
         }
 
